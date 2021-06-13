@@ -27,7 +27,8 @@ export function getGetSignedUrl( key: string ): string{
     const url = s3.getSignedUrl('getObject', {
         Bucket: c.aws_media_bucket,
         Key: key,
-        Expires: signedUrlExpireSeconds
+        Expires: signedUrlExpireSeconds,
+        //ResponseContentType: "application/json"
       });
 
     return url;

@@ -7,7 +7,7 @@ export const config = {
     "dialect": "postgres",
     "aws_region": "us-east-2",
     "aws_profile": "default",
-    "aws_media_bucket": "udacitymics3-cloud-dev"
+    "aws_media_bucket": "udagram-ojos3-dev"
   },
   "prod": {
     "username": "",
