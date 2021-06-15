@@ -20,7 +20,7 @@ router.get('/', async (req: Request, res: Response) => {
 //Add an endpoint to GET a specific resource by Primary Key
 
 // update a specific resource
-router.patch('/:id', 
+router.patch("/:id", 
     requireAuth, 
     async (req: Request, res: Response) => {
         //@TODO try it yourself
@@ -29,10 +29,11 @@ router.patch('/:id',
 
 
 // Get a signed url to put a new item in the bucket
-router.get('/signed-url/:fileName', 
+router.get("/signed-url/:fileName", 
     requireAuth, 
     async (req: Request, res: Response) => {
     let { fileName } = req.params;
+    console.log(fileName);
     const url = AWS.getPutSignedUrl(fileName);
     res.status(201).send({url: url});
 });
